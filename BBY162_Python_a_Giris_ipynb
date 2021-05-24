@@ -3,7 +3,7 @@
   "nbformat_minor": 0,
   "metadata": {
     "colab": {
-      "name": "BBY162_Python_a_Giris.ipynb adlı not defterinin kopyası adlı not defterinin kopyası adlı not defterinin kopyası adlı not defterinin kopyası adlı not defterinin kopyası adlı not defterinin kopyası",
+      "name": "BBY162_Python_a_Giris.ipynb adlı not defterinin kopyası adlı not defterinin kopyası adlı not defterinin kopyası adlı not defterinin kopyası adlı not defterinin kopyası adlı not defterinin kopyası adlı not defterinin kopyası",
       "provenance": [],
       "collapsed_sections": [],
       "toc_visible": true,
@@ -32,6 +32,15 @@
       },
       "source": [
         "#Bölüm 00: Python'a Giriş"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "Hn-jwwx6Vh0l"
+      },
+      "source": [
+        ""
       ]
     },
     {
@@ -471,6 +480,30 @@
         "kul_ad = \"rafet\"\n",
         "```\n",
         "\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "3v8qnV2oUtjb",
+        "outputId": "ca4d93bb-7b0d-4490-930e-1b158072b5f9"
+      },
+      "source": [
+        "from google.colab import drive\n",
+        "drive.mount('/content/drive')"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Drive already mounted at /content/drive; to attempt to forcibly remount, call drive.mount(\"/content/drive\", force_remount=True).\n"
+          ],
+          "name": "stdout"
+        }
       ]
     },
     {
@@ -4902,15 +4935,21 @@
     {
       "cell_type": "code",
       "metadata": {
-        "id": "3KXhzd_FKMWt"
+        "id": "3KXhzd_FKMWt",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "eda1d506-ffe3-4b99-e880-95be2e3ba293"
       },
       "source": [
         "#Google Drive Bağlantısı\n",
+        "'''\n",
         "from google.colab import drive\n",
         "drive.mount('/gdrive')\n",
         "\n",
         "dosya = \"/gdrive/My Drive/Colab Notebooks/BBY162 - Programlama ve Algoritmalar/metin.txt\"\n",
-        "\n",
+        "'''\n",
+        "dosya = \"/content/drive/MyDrive/adres.txt\"\n",
         "f = open(dosya, \"r\") \n",
         "\n",
         "for line in f.readlines():\n",
@@ -4919,7 +4958,17 @@
         "f.close()"
       ],
       "execution_count": null,
-      "outputs": []
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Fatma Kaya\n",
+            "\n",
+            "fattttoky.55@gmail.com\n"
+          ],
+          "name": "stdout"
+        }
+      ]
     },
     {
       "cell_type": "markdown",
@@ -4965,13 +5014,15 @@
       },
       "source": [
         "#Google Drive Bağlantısı\n",
+        "'''\n",
         "from google.colab import drive\n",
         "drive.mount('/gdrive')\n",
         " \n",
         "dosya = \"/gdrive/My Drive/Colab Notebooks/BBY162 - Programlama ve Algoritmalar/cikti.txt\"\n",
-        "\n",
-        "f = open(dosya, 'w') # Mevcut veriye ek veri yazılması için parametre: 'a'\n",
-        "f.write(\"test\") # Her yeni verinin bir alt satıra yazdırılması \"test\\n\"\n",
+        "'''\n",
+        "dosya = \"/content/drive/MyDrive/adres.txt\"\n",
+        "f = open(dosya, 'a') # Mevcut veriye ek veri yazılması için parametre: 'a'\n",
+        "f.write(\"fattttoky.55@gmail.com\\n\") # Her yeni verinin bir alt satıra yazdırılması \"test\\n\"\n",
         "f.close()"
       ],
       "execution_count": null,
